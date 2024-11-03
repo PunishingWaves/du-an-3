@@ -36,6 +36,14 @@
 
   <!-- style css -->
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- responsive css -->
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+
+  <!-- animate style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <title>Shine Smile</title>
 </head>
 
@@ -46,7 +54,7 @@
     <div class="container">
       <div class="header-top">
         <!-- logo -->
-        <a href="./"><img src="./assets/img/Logo.svg" alt="Shine Smile" class="logo"></a>
+        <a href="./"><img src="./assets/img/Logo.svg" alt="Shine Smile" class="logo header__logo"></a>
         <!-- nav -->
         <nav class="navbar">
           <ul class="navbar__list">
@@ -97,6 +105,24 @@
     </div>
   </header>
 
+  <!-- Tablet&Mobile Header -->
+  <div class="mobile-header">
+    <!-- Tablet&Mobile Menu -->
+    <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+    <label for="menu-checkbox">
+      <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32H416c17.7 0 32 14.3 32 32z" />
+        <path>
+      </svg>
+    </label>
+    <!-- overlay -->
+    <label for="menu-checkbox" class="menu-overlay">
+
+    </label>
+
+  </div>
+
   <!-- MAIN -->
   <main>
 
@@ -109,7 +135,7 @@
         <div class="service__row">
           <!-- service left -->
           <figure>
-            <img src="./assets/img/hero.jpg" alt="Our Services" class="service__img">
+            <img src="./assets/img/hero.jpg" alt="Our Services" class="service__img" data-aos="animate__backInUp">
           </figure>
           <!-- service right -->
           <div class="service__list">
@@ -182,7 +208,8 @@
     <!-- WORK -->
     <section class="work">
       <div class="container">
-        <h2 class="section-heading section-heading--2">How it works</h2>
+        <h2 class="section-heading section-heading--2" data-aos="animate__bounceIn">How it works
+        </h2>
         <p class="section-desc work__desc">Exceptional dental care for all ages. Your great smile begins with a great
           dentist.</p>
 
@@ -245,7 +272,7 @@
     <section class="team">
       <div class="container">
         <div class="team-header">
-          <h2 class="section-heading">Our virtual dentist</h2>
+          <h2 class="section-heading" data-aos="zoom-in-down">Our virtual dentist</h2>
           <a href="#!" class="btn team__cta">Meet our dentist</a>
         </div>
 
@@ -317,7 +344,7 @@
         <div class="install__inner">
           <!-- install left -->
           <figure>
-            <img src="./assets/img/Phone.png" alt="" class="install__img">
+            <img src="./assets/img/Phone.png" alt="" class="install__img" data-aos="animate__fadeInUp">
           </figure>
           <!-- install right -->
           <section class="install__content">
@@ -515,6 +542,16 @@
 
     </div>
   </section>
+
+  <!-- JavaScript Animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      useClassNames: true,
+      initClassName: false,
+      animatedClassName: 'animate__animated',
+    });
+  </script>
 
 </body>
 
